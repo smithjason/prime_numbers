@@ -10,9 +10,23 @@ describe JasonPrime do
   end
 
   describe "up_to" do
-    it "returns no numbers when limit is less than 2"
-    it "returns 2 when limit is 2"
-    it "returns 2,3,5,7 when limit is 10"
+    it "returns nil when limit is less than 2" do
+      myPrime = JasonPrime.new
+      expected_result = nil
+      expect(myPrime.up_to(1)).to eq(expected_result)
+    end
+
+    it "returns 2 when limit is 2" do
+      myPrime = JasonPrime.new
+      expected_result = [2]
+      expect(myPrime.up_to(2)).to eq(expected_result)
+    end
+
+    it "returns 2,3,5,7 when limit is 10" do
+      myPrime = JasonPrime.new
+      expected_result = [2,3,5,7]
+      expect(myPrime.up_to(10)).to eq(expected_result)
+    end
   end
 
   # describe "generate" do

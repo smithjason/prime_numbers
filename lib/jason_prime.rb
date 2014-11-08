@@ -1,7 +1,7 @@
-require "pry"
-
 class JasonPrime
   def up_to(upper_limit=100)
+    return nil if upper_limit < 2
+
     integers_up_to_limit = (2..upper_limit).to_a
     divisor_index = 0
 
@@ -16,5 +16,3 @@ class JasonPrime
     integers_up_to_limit
   end
 end
-
-JasonPrime.new.up_to(10)
