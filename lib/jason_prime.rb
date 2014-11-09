@@ -8,6 +8,29 @@ class JasonPrime
     primes_in_integer_array(optimized_integers)
   end
 
+  def primes_to_nth_prime(n)
+    return nil if n < 1
+    return [2] if n == 1
+    return [2,3] if n == 2
+
+    prime_numbers = [2,3]
+    potential_prime = prime_numbers.last
+
+    while prime_numbers.length < n
+      potential_prime += 2
+      prime = true
+
+      prime_numbers.each do |prime_number|
+        prime = false if potential_prime % prime_number == 0
+        break if !prime
+      end
+
+      prime_numbers << potential_prime if prime
+    end
+
+    prime_numbers
+  end
+
   private
 
   def primes_in_integer_array(integer_array)

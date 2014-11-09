@@ -14,30 +14,37 @@ describe JasonPrime do
 
   describe "primes_to_upper_limit" do
     it "returns nil when limit is less than 2" do
-      expected_result = nil
-      expect(@myPrime.primes_to_upper_limit(1)).to eq(expected_result)
+      expect(@myPrime.primes_to_upper_limit(1)).to eq(nil)
     end
 
     it "returns [2] when limit is 2" do
-      expected_result = [2]
-      expect(@myPrime.primes_to_upper_limit(2)).to eq(expected_result)
+      expect(@myPrime.primes_to_upper_limit(2)).to eq([2])
     end
 
     it "returns [2,3] when limit is 3" do
-      expected_result = [2,3]
-      expect(@myPrime.primes_to_upper_limit(3)).to eq(expected_result)
+      expect(@myPrime.primes_to_upper_limit(3)).to eq([2,3])
     end
 
     it "returns 2,3,5,7 when limit is 10" do
-      expected_result = [2,3,5,7]
-      expect(@myPrime.primes_to_upper_limit(10)).to eq(expected_result)
+      expect(@myPrime.primes_to_upper_limit(10)).to eq([2,3,5,7])
     end
   end
 
   describe "primes_to_nth_prime" do
-    it "returns nil when n is 0"
-    it "returns [2] when n is 1"
-    it "returns [2,3] numbers when n is 2"
-    it "returns [2,3,5,7,11,13,17,19,23,29] when n is 10"
+    it "returns nil when n is 0" do
+      expect(@myPrime.primes_to_nth_prime(0)).to eq(nil)
+    end
+
+    it "returns [2] when n is 1" do
+      expect(@myPrime.primes_to_nth_prime(1)).to eq([2])
+    end
+
+    it "returns [2,3] numbers when n is 2" do
+      expect(@myPrime.primes_to_nth_prime(2)).to eq([2,3])
+    end
+
+    it "returns [2,3,5,7,11,13,17,19,23,29] when n is 10" do
+      expect(@myPrime.primes_to_nth_prime(10)).to eq([2,3,5,7,11,13,17,19,23,29])
+    end
   end
 end
