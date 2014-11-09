@@ -25,8 +25,12 @@ describe JasonPrime do
       expect(@myPrime.primes_to_upper_limit(3)).to eq([2,3])
     end
 
-    it "returns 2,3,5,7 when limit is 10" do
+    it "returns [2,3,5,7] when limit is 10" do
       expect(@myPrime.primes_to_upper_limit(10)).to eq([2,3,5,7])
+    end
+
+    it "returns [2,3,5,7,11,13,17,19,23,29] when limit is 30" do
+      expect(@myPrime.primes_to_upper_limit(30)).to eq([2,3,5,7,11,13,17,19,23,29])
     end
   end
 
