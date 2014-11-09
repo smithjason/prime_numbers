@@ -1,13 +1,16 @@
 class JasonPrime
-  def up_to(upper_limit=100)
+  def primes_to_upper_limit(upper_limit=100)
     return nil if upper_limit < 2
+    return [2] if upper_limit == 2
+    return [2,3] if upper_limit == 3
+
     optimized_integers = optimize_integer_array((2..upper_limit).to_a)
-    primes(optimized_integers)
+    primes_in_integer_array(optimized_integers)
   end
 
   private
 
-  def primes(integer_array)
+  def primes_in_integer_array(integer_array)
     divisor_index = 0
     while integer_less_than_square_root_of_limit(integer_array[divisor_index], integer_array.last)
       prime_number_divisor = integer_array[divisor_index]
