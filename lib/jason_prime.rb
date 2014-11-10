@@ -42,7 +42,7 @@ class JasonPrime
       prime_number_divisor = integer_array[divisor_index]
 
       integer_array.select! do |integer|
-        !is_composite_integer?(integer, prime_number_divisor) or integer == prime_number_divisor
+        !is_composite_integer?(integer, prime_number_divisor) || integer == prime_number_divisor
       end
 
       divisor_index += 1
