@@ -14,16 +14,16 @@ class PrimeHelper
 
     while prime_numbers.length < nth_prime
       potential_prime += 2
-      prime = true
+      is_prime = true
 
       prime_numbers.each do |prime_number|
         if potential_prime % prime_number == 0
-          prime = false
+          is_prime = false
           break
         end
       end
 
-      prime_numbers << potential_prime if prime
+      prime_numbers << potential_prime if is_prime
     end
 
     prime_numbers
