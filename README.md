@@ -8,4 +8,4 @@
   * Default Nth-Prime value is 10.
 
 ## Run RSpec Tests
-1. rspec spec/lib/jason_prime_spec.rb
+1. rspec spec/helpers/prime_helper_spec.rb
