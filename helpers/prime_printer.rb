@@ -11,6 +11,8 @@ class PrimePrinter
     end
   end
 
+  private
+
   def self.print_cell(data)
     printf("%5d", "#{data}")
   end
